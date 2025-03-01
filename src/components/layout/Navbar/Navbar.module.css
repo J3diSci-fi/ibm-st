@@ -1,0 +1,133 @@
+.logo {
+  width: 170px;
+  margin-left: 50px;
+}
+
+.navbar {
+  width: 100%;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbarContent {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navLinks {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  justify-content: center;
+  margin-left: -4%;
+}
+
+.navLinks li {
+  margin: 0 30px;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  position: relative;
+  color: black;
+}
+
+.navLinks li a::after,
+.spanMinisterios::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #53AB8B;
+  transition: width 0.3s ease-in-out;
+}
+
+.navLinks li a:hover::after,
+.spanMinisterios:hover::after {
+  width: 100%;
+}
+
+/* Estilo adicional para o span */
+.spanMinisterios {
+  position: relative; /* Necessário para o efeito ::after */
+  cursor: pointer; /* Simula um link */
+  text-decoration: none; /* Remove sublinhado padrão */
+  color: inherit; /* Garante que a cor do texto seja consistente */
+}
+
+/* Estilo da seta com animação */
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+  width: 15px;
+  height: auto;
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+.arrowUp {
+  transform: rotate(360deg); /* Seta para cima */
+}
+
+.arrowDown {
+  transform: rotate(0deg); /* Seta para baixo */
+}
+
+/* Animação para o submenu de ministérios */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.submenuActive {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu li {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+.submenu li a {
+  color: rgba(53,71,95,255);
+  text-decoration: none;
+  color: black;
+}
+
+.submenu li:hover {
+  background-color: #eee;
+}
+
+.btNcontribua{
+  background-color: #53AB8B;
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btNcontribua:hover {
+  background-color: #458a70;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+}

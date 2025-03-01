@@ -1,0 +1,26 @@
+.header {
+  position: fixed; /* Fixa o header no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1rem 0; /* Padding inicial */
+  box-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Garante que fique acima do conteúdo */
+  transition: all 0.3s ease; /* Animações suaves */
+}
+
+.header.scrolled {
+  padding: 0.5rem 0; /* Reduz o padding ao rolar */
+  opacity: 0.9; /* Aumenta a opacidade levemente */
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1); /* Reduz a sombra */
+}
+
+.navbar-logo {
+  height: 60px; /* Altura inicial do logo */
+  transition: height 0.3s ease; /* Transição suave para o tamanho do logo */
+}
+
+.header.scrolled .navbar-logo {
+  height: 40px; /* Reduz o tamanho do logo ao rolar */
+}
